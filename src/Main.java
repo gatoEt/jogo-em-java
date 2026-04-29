@@ -11,15 +11,23 @@ class Main{
         int l = ler.nextInt();
         int c = ler.nextInt();
 
-
+        int ce = 0;
+        int le = 0;
 
         while(true){
 
-            if(l < 10 && l >= 0 && c < 10 && c >= 0){
+            if(l < 10 && l >= 0 && c < 10 && c >= 0 && ce < 10 && ce >= 0  && le < 10 && le >= 0){
+
+                le = rand.nextInt(9);
+                ce = rand.nextInt(9);
+
                 for(int i = 0; i < 10; i++){
                     for(int j = 0; j < 10; j++){
                         if(i == l && j == c){
                             mapa[i][j] = "P";
+                        }
+                        else if(i == le && j == ce){
+                            mapa[i][j] = "E";
                         }
                         else{
                             mapa[i][j] = "[]";
